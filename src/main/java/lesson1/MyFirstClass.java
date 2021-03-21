@@ -33,9 +33,21 @@ public class MyFirstClass {
 
         float calculateResult = calculateExpression(10,5,8,4);
         System.out.println("Результат вычисления выражения: " + calculateResult);
+
+        if (checkSumRange(5, 7)) {
+            System.out.println("Сумма чисел попадает в диапазон");
+        } else {
+            System.out.println("Сумме чисел не попадает в диапазон");
+        }
     }
 
     private static float calculateExpression(float a, float b,  float c,  float d) {
         return a * (b + (c / d));
+    }
+
+    private static boolean checkSumRange(int a, int b) {
+        int rangeMin = 10, rangeMax = 20;
+        int sum = a + b;
+        return (sum >= rangeMin) && (sum <= rangeMax);
     }
 }
