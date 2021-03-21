@@ -40,10 +40,16 @@ public class MyFirstClass {
             System.out.println("Суммa чисел не попадает в диапазон");
         }
 
-        checkNumberSign(-7);
-        checkNumberSign(-1);
-        checkNumberSign(0);
-        checkNumberSign(5);
+        printNumberSign(-7);
+        printNumberSign(-1);
+        printNumberSign(0);
+        printNumberSign(5);
+
+        if (checkNumberSign(-8)) {
+            System.out.println("Число отрицательное");
+        } else {
+            System.out.println("Число положительное");
+        }
     }
 
     private static float calculateExpression(float a, float b,  float c,  float d) {
@@ -56,11 +62,17 @@ public class MyFirstClass {
         return (sum >= rangeMin) && (sum <= rangeMax);
     }
 
-    private static void checkNumberSign(int number) {
+    private static void printNumberSign(int number) {
         if (number >= 0) {
             System.out.println("Чилсо " + number + " положительное");
         } else {
             System.out.println("Чилсо " + number + " отрицательное");
         }
+    }
+
+    private static boolean checkNumberSign(int number) {
+        // требовалось вернуть true, если число отрицательное
+        // можно было !(number >= 0), но это не эстетично
+        return (number < 0);
     }
 }
