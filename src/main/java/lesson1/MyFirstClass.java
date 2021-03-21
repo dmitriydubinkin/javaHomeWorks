@@ -16,8 +16,8 @@ public class MyFirstClass {
         double totalPrice = 254078.77;
 
         // символ F, записанный двумя способами
-        char simbol1 = 'F';
-        char simbol2 = '\u0046';
+        char symbol1 = 'F';
+        char symbol2 = '\u0046';
 
         // ссылочная переменная, строка с сообщением
         String message = "Hi, my name is Dmitriy";
