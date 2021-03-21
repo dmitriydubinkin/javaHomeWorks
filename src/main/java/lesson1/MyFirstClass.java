@@ -30,5 +30,12 @@ public class MyFirstClass {
 
         // пример константы, ускорение свободного падения
         final float GRAVITY_ACCELERATION = 9.8f;
+
+        float calculateResult = calculateExpression(10,5,8,4);
+        System.out.println("Результат вычисления выражения: " + calculateResult);
+    }
+
+    private static float calculateExpression(float a, float b,  float c,  float d) {
+        return a * (b + (c / d));
     }
 }
