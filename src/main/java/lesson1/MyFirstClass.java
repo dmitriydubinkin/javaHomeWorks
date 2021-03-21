@@ -52,6 +52,8 @@ public class MyFirstClass {
         }
 
         printHelloMessage("Игорь");
+
+        printYearStatus(1995);
     }
 
     private static float calculateExpression(float a, float b,  float c,  float d) {
@@ -80,5 +82,15 @@ public class MyFirstClass {
 
     private static void printHelloMessage(String userName) {
         System.out.println("Привет, " + userName + "!");
+    }
+
+    private static void printYearStatus(int year) {
+        if (year <= 0) {
+            System.out.println("Указан не корректный год");
+        } else if (((year % 4 == 0) && (year % 100 > 0)) || (year % 400 == 0)) {
+            System.out.println("Год високосный");
+        } else {
+            System.out.println("Год не високосный");
+        }
     }
 }
