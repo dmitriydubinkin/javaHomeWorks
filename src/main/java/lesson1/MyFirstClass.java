@@ -50,6 +50,8 @@ public class MyFirstClass {
         } else {
             System.out.println("Число положительное");
         }
+
+        printHelloMessage("Игорь");
     }
 
     private static float calculateExpression(float a, float b,  float c,  float d) {
@@ -74,5 +76,9 @@ public class MyFirstClass {
         // требовалось вернуть true, если число отрицательное
         // можно было !(number >= 0), но это не эстетично
         return (number < 0);
+    }
+
+    private static void printHelloMessage(String userName) {
+        System.out.println("Привет, " + userName + "!");
     }
 }
