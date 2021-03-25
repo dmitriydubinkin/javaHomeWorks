@@ -8,6 +8,8 @@ public class ArraysLearning {
         initIntArrayAndInvert();
         // Задание 2
         fillEmptyArray();
+        // Задание 3
+        changeArrayValues();
     }
 
     private static void initIntArrayAndInvert() {
@@ -31,5 +33,19 @@ public class ArraysLearning {
         }
 
         System.out.printf("%-20s %s%n", "Результат", Arrays.toString(emptyArray));
+    }
+
+    private static void changeArrayValues() {
+        int[] anotherArray = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+
+        System.out.printf("%-20s %s%n", "Исходный", Arrays.toString(anotherArray));
+
+        for (int i = 0; i < anotherArray.length; i++) {
+            if (anotherArray[i] < 6) {
+                anotherArray[i] *= 2;
+            }
+        }
+
+        System.out.printf("%-20s %s%n", "Измененный", Arrays.toString(anotherArray));
     }
 }
