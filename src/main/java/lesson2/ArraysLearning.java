@@ -12,6 +12,8 @@ public class ArraysLearning {
         changeArrayValues();
         // Задание 4. Укажите размер матрицы
         fillArrayDiagonals(5);
+        // Задание 5
+        arrayMinMax();
     }
 
     private static void initIntArrayAndInvert() {
@@ -53,7 +55,7 @@ public class ArraysLearning {
 
     private static void fillArrayDiagonals(int size) {
         int[][] matrix = new int[size][size];
-        
+
         if (size % 2 == 0) {
             // скажите, уместно ли в java такое прерывание выполнения метода?
             System.out.println("Диагонали не получится, укажите нечетный размер ...");
@@ -76,5 +78,22 @@ public class ArraysLearning {
             }
             System.out.println();
         }
+    }
+
+    private static void arrayMinMax() {
+        int[] values = {3, 7, -2, 3, 5, 9, 3, 6, 11, 3, 6};
+        int min = values[0], max = values[0];
+
+        for (int i = 1; i < values.length; i++) {
+            if (values[i] < min) {
+                min = values[i];
+            }
+
+            if (values[i] > max) {
+                max = values[i];
+            }
+        }
+
+        System.out.printf("Минимальное: %d, Максимальное: %d", min, max);
     }
 }
