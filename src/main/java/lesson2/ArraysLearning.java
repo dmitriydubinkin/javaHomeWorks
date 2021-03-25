@@ -10,6 +10,8 @@ public class ArraysLearning {
         fillEmptyArray();
         // Задание 3
         changeArrayValues();
+        // Задание 4. Укажите размер матрицы
+        fillArrayDiagonals(5);
     }
 
     private static void initIntArrayAndInvert() {
@@ -47,5 +49,32 @@ public class ArraysLearning {
         }
 
         System.out.printf("%-20s %s%n", "Измененный", Arrays.toString(anotherArray));
+    }
+
+    private static void fillArrayDiagonals(int size) {
+        int[][] matrix = new int[size][size];
+        
+        if (size % 2 == 0) {
+            // скажите, уместно ли в java такое прерывание выполнения метода?
+            System.out.println("Диагонали не получится, укажите нечетный размер ...");
+            return;
+        }
+
+        for (int i = 0; i < size; i++) {
+            int index = size - i - 1;
+            matrix[i][i] = 1;
+            matrix[index][i] = 1;
+        }
+
+        printIntMatrix(matrix);
+    }
+
+    private static void printIntMatrix(int[][] value) {
+        for (int[] row : value) {
+            for (int coll : row) {
+                System.out.printf("%3d", coll);
+            }
+            System.out.println();
+        }
     }
 }
