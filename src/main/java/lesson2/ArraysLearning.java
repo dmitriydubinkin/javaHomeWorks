@@ -14,6 +14,16 @@ public class ArraysLearning {
         fillArrayDiagonals(5);
         // Задание 5
         arrayMinMax();
+
+        // Задание 6
+        int[] dataset = {2, 2, 2, 1, 2, 2, 10, 1};
+        boolean isBalance = checkArrayBalance(dataset);
+
+        if (isBalance) {
+            System.out.println("В переданном массиве есть баланс");
+        } else {
+            System.out.println("В переданном массиве нет баланса");
+        }
     }
 
     private static void initIntArrayAndInvert() {
@@ -94,6 +104,25 @@ public class ArraysLearning {
             }
         }
 
-        System.out.printf("Минимальное: %d, Максимальное: %d", min, max);
+        System.out.printf("Минимальное: %d, Максимальное: %d%n", min, max);
+    }
+
+    // вероятно, это не самое оптимальное решение, как можно еще?
+    private static boolean checkArrayBalance(int[] data) {
+        int leftSum = 0, totalSum = 0;
+
+        for (int element : data) {
+            totalSum += element;
+        }
+
+        for (int element : data) {
+            leftSum += element;
+
+            if (totalSum - leftSum == leftSum) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
