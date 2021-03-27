@@ -134,7 +134,7 @@ public class ArraysLearning {
     }
 
     private static void shiftArray(int[] data, int n) {
-        int offset = Math.abs(n);
+        int offset = Math.abs(n % data.length);
         int endIndex = data.length - 1;
 
         if (n > 0) {
