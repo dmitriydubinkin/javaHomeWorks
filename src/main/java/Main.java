@@ -1,3 +1,7 @@
+import animals.Animal;
+import animals.Cat;
+import animals.Dog;
+
 import java.util.Scanner;
 
 public class Main {
@@ -82,8 +86,8 @@ public class Main {
     }
 
     private static boolean isRepeat() {
-        // для упрощения не будем проверять правильность ввода
         System.out.print("\nЖелаете повторить? (Да - 1, Нет - 0): ");
+        // для упрощения не будем проверять правильность ввода
         int value = input.nextInt();
         return value == 1;
     }
